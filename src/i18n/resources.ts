@@ -27,13 +27,13 @@ export const resources = {
           "I care about building technology that improves human agency. My approach blends engineering discipline with artistic sensitivity: define clearly, iterate patiently, and keep asking what kind of future we are building.",
         timeline: [
           {
-            year: "2024",
+            year: "2025",
             title: "BUPT Freshman",
             description:
               "Started Electronic Information at BUPT and built a strong systems-thinking foundation.",
           },
           {
-            year: "2025",
+            year: "2026",
             title: "Web3 Internship",
             description:
               "Gained hands-on experience in decentralized infrastructure and production-level collaboration.",
@@ -105,26 +105,6 @@ export const resources = {
       thinking: {
         kicker: "Thinking / Essays",
         title: "Notes from an engineer learning how to think long-term.",
-        items: [
-          {
-            title: "AI as Extension, Not Replacement",
-            excerpt:
-              "The future of intelligence is less about substitution and more about better cognitive partnerships.",
-            tag: "AI / Society",
-          },
-          {
-            title: "Engineering Calm in a Fast World",
-            excerpt:
-              "Good systems reduce panic. They make complexity legible and decisions humane.",
-            tag: "Product Philosophy",
-          },
-          {
-            title: "Why Builders Need Humanities",
-            excerpt:
-              "Technology scales power. Humanities shape direction. We need both for a livable future.",
-            tag: "Tech x Humanities",
-          },
-        ],
       },
       contact: {
         kicker: "Contact",
@@ -163,12 +143,12 @@ export const resources = {
           "我关注技术如何真正提升人的能动性。我希望在工程纪律与艺术感知之间找到平衡：定义问题要清晰，迭代过程要耐心，最终始终追问我们正在塑造怎样的未来。",
         timeline: [
           {
-            year: "2024",
+            year: "2025",
             title: "BUPT 大一",
             description: "进入北京邮电大学电子信息类，系统学习工程基础。",
           },
           {
-            year: "2025",
+            year: "2026",
             title: "Web3 实习",
             description: "在去中心化基础设施场景中参与真实协作与工程实践。",
           },
@@ -236,24 +216,6 @@ export const resources = {
       thinking: {
         kicker: "思考 / 文章",
         title: "一个工程学习者的长期主义笔记。",
-        items: [
-          {
-            title: "AI 不是替代，而是延展",
-            excerpt:
-              "智能系统的价值，不在替代人，而在构建更高质量的人机协作关系。",
-            tag: "AI / 社会",
-          },
-          {
-            title: "在高速世界里做冷静工程",
-            excerpt: "好的系统能降低焦虑，让复杂问题变得可读、可决策。",
-            tag: "产品思维",
-          },
-          {
-            title: "为什么技术建设者需要人文学科",
-            excerpt: "技术决定能力边界，人文决定方向边界。二者缺一不可。",
-            tag: "技术 x 人文",
-          },
-        ],
       },
       contact: {
         kicker: "联系",

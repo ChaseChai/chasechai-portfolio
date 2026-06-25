@@ -9,9 +9,13 @@ import { Hero } from "./hero";
 import { Navbar } from "./navbar";
 import { ProjectsSection } from "./projects";
 import { SkillsSection } from "./skills";
-import { ThinkingSection } from "./thinking";
+import { ThinkingSection, type EssayItem } from "./thinking";
 
-export function PortfolioPage() {
+interface PortfolioPageProps {
+  posts?: EssayItem[];
+}
+
+export function PortfolioPage({ posts = [] }: PortfolioPageProps) {
   const { i18n } = useTranslation();
 
   return (
@@ -30,7 +34,7 @@ export function PortfolioPage() {
           <AboutSection />
           <SkillsSection />
           <ProjectsSection />
-          <ThinkingSection />
+          <ThinkingSection posts={posts} />
           <ContactSection />
         </div>
       </motion.main>
