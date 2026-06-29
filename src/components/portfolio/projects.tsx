@@ -10,6 +10,7 @@ type ProjectItem = {
   desc: string;
   stack: string;
   highlight: string;
+  github: string;
 };
 
 export function ProjectsSection() {
@@ -26,8 +27,11 @@ export function ProjectsSection() {
 
         <div className="mt-8 grid gap-5 md:grid-cols-3">
           {projects.map((project, index) => (
-            <motion.article
+            <motion.a
               key={project.name}
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 22 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.25 }}
@@ -37,7 +41,7 @@ export function ProjectsSection() {
                 ease: "easeInOut",
               }}
               whileHover={{ scale: 1.015 }}
-              className="group rounded-xl border border-[var(--line-soft)] bg-[var(--surface)] p-5"
+              className="group block rounded-xl border border-[var(--line-soft)] bg-[var(--surface)] p-5"
             >
               <div className="flex items-start justify-between gap-3">
                 <h3 className="text-lg font-medium text-[var(--foreground)]">
@@ -54,7 +58,7 @@ export function ProjectsSection() {
               <p className="mt-3 text-sm text-[var(--text-secondary)]">
                 {project.highlight}
               </p>
-            </motion.article>
+            </motion.a>
           ))}
         </div>
       </section>

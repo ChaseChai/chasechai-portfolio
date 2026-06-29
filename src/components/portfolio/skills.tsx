@@ -6,7 +6,7 @@ import { AnimatedReveal } from "./animated-reveal";
 
 type SkillGroup = {
   title: string;
-  items: Array<{ name: string; level: number }>;
+  items: Array<{ name: string }>;
 };
 
 const icons = [Code2, Cpu, Wrench];
@@ -36,21 +36,14 @@ export function SkillsSection() {
                   {group.title}
                 </h3>
 
-                <ul className="mt-5 space-y-4">
+                <ul className="mt-5 space-y-3">
                   {group.items.map((item) => (
-                    <li key={item.name}>
-                      <div className="mb-1 flex items-center justify-between text-sm">
-                        <span>{item.name}</span>
-                        <span className="text-[var(--text-muted)]">
-                          {item.level}%
-                        </span>
-                      </div>
-                      <div className="h-1 rounded bg-[var(--line-soft)]">
-                        <div
-                          className="h-1 rounded bg-[var(--line-strong)] transition-all duration-300 ease-in-out"
-                          style={{ width: `${item.level}%` }}
-                        />
-                      </div>
+                    <li
+                      key={item.name}
+                      className="flex items-center gap-2 text-sm text-[var(--text-primary)]"
+                    >
+                      <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--line-strong)]" />
+                      <span>{item.name}</span>
                     </li>
                   ))}
                 </ul>
