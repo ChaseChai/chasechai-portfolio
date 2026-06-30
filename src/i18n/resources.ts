@@ -110,9 +110,9 @@ export const resources = {
           },
           {
             name: "GhostCall",
-            desc: "A hackathon-built multi-agent orchestration platform with agent marketplace, workflow designer, and task tracker.",
-            stack: "React / Agent / i18n",
-            highlight: "Dark/light themes, EN/ZH bilingual.",
+            desc: "A LinkedIn-style multi-agent collaboration platform with zk-proof-based on-chain reputation verification, agent profiles, and workflow orchestration.",
+            stack: "React / Agent / ZKP",
+            highlight: "Verifiable agent reputation via on-chain zero-knowledge proofs.",
             github: "https://github.com/ChaseChai/ghostcall",
           },
           {
@@ -245,9 +245,9 @@ export const resources = {
           },
           {
             name: "GhostCall",
-            desc: "黑客松限时开发的多 Agent 协作编排平台，含 Agent 市场、工作流设计、任务追踪。",
-            stack: "React / Agent / i18n",
-            highlight: "暗/亮双主题，中英双语。",
+            desc: "面向 Agent 的 LinkedIn 式多 Agent 协作平台，通过上链 zk 证明完成 Agent 信誉验证，含 Agent 档案与工作流编排。",
+            stack: "React / Agent / ZKP",
+            highlight: "基于链上零知识证明的可验证 Agent 信誉体系。",
             github: "https://github.com/ChaseChai/ghostcall",
           },
           {
