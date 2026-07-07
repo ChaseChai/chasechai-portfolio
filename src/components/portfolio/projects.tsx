@@ -23,7 +23,6 @@ export function ProjectsSection() {
     <AnimatedReveal className="section-frame" delay={0.15}>
       <section id="projects" className="p-7 md:p-10">
         <p className="section-kicker">{t("projects.kicker")}</p>
-        <h2 className="section-title">{t("projects.title")}</h2>
 
         <div className="mt-8 grid gap-5 md:grid-cols-3">
           {projects.map((project, index) => (

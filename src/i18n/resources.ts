@@ -78,7 +78,6 @@ export const resources = {
       },
       projects: {
         kicker: "Projects",
-        title: "Six full‑stack projects in six months — vision to reality.",
         items: [
           {
             name: "Nexday",
@@ -213,7 +212,6 @@ export const resources = {
       },
       projects: {
         kicker: "项目",
-        title: "六个月，六个全栈项目——愿景到落地。",
         items: [
           {
             name: "Nexday",
