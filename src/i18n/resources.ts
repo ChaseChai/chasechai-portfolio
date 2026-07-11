@@ -11,7 +11,7 @@ export const resources = {
       },
       hero: {
         kicker: "/ 2026",
-        name: "Chase",
+        name: "Chase Chai",
         subtitle:
           "An idealist determined to explore the world and leave meaningful traces.",
         typedLines: [
@@ -149,7 +149,7 @@ export const resources = {
       },
       hero: {
         kicker: "/ 2026",
-        name: "Chase",
+        name: "Chase Chai",
         subtitle: "一个想探索世界，并在其中留下自己痕迹的理想主义者。",
         typedLines: [
           "我在复杂世界里，设计冷静而可靠的系统。",
@@ -166,7 +166,7 @@ export const resources = {
           {
             year: "2025",
             title: "BUPT 大一",
-            description: "进入 BUPT 电子信息类，系统学习工程基础。",
+            description: "进入北京邮电大学电子信息类，系统学习工程基础。",
           },
           {
             year: "2026",
