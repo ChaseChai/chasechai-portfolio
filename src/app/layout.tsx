@@ -15,11 +15,11 @@ const notoSansSC = Noto_Sans_SC({
 });
 
 export const metadata: Metadata = {
-  title: "Chase Chai | Portfolio",
+  title: "Chase | Portfolio",
   description:
     "Minimal line-art portfolio exploring AI, Web3, product thinking, and human-centered technology.",
   keywords: [
-    "Chase Chai",
+    "Chase",
     "Portfolio",
     "AI",
     "Web3",
