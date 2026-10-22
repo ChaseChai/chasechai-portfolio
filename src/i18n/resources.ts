@@ -34,9 +34,15 @@ export const resources = {
           },
           {
             year: "2026",
-            title: "Web3 Internship",
+            title: "ETHpanda Web3 Internship",
             description:
-              "Gained hands-on experience in decentralized infrastructure and production-level collaboration.",
+              "Winter cohort of ETHpanda. Core member of the BUPT Blockchain Association, running daily operations for a 100+ member community.",
+          },
+          {
+            year: "2026",
+            title: "AdventureX Hackathon · 2nd Prize",
+            description:
+              "Won a track second prize with Decree Farm, an intelligent-ring × AI agent behavior incentive product.",
           },
           {
             year: "Now",
@@ -80,6 +86,31 @@ export const resources = {
         kicker: "Projects",
         items: [
           {
+            name: "Decree Farm",
+            desc: "An intelligent-ring × AI agent behavior incentive product. IMU sensing detects real-world focus and maps it to a gamified virtual farm through an Observe → Decide → Act → Feedback agent loop.",
+            stack: "AI Agent / Edge AI / Smart Hardware",
+            highlight:
+              "100+ member community, full loop from ring sensing to in-game feedback.",
+            award: "AdventureX 2026 · Track 2nd Prize",
+          },
+          {
+            name: "GhostCall",
+            desc: "An AI agent collaboration network: task marketplace, collaboration protocol, and trust infrastructure. Binds agent identity to code hashes and proves execution with zkVM.",
+            stack: "React / Agent / zkVM",
+            highlight:
+              "Verifiable \"code as identity\" execution plus a capability–reputation–price graph.",
+            award: "Zhongguancun Hackathon 2026 · Award Winner",
+            github: "https://github.com/ChaseChai/ghostcall",
+          },
+          {
+            name: "AuditOps (Kite Payment)",
+            desc: "A multi-agent contract audit and A2A payment system on Kite AI. Map-Reduce audit matrix with budget-isolated, EIP-712 authorized settlement and session keys.",
+            stack: "Python / Solidity / Agent",
+            highlight:
+              "End-to-end demo on Kite AI Testnet with 20–50% lower audit cost.",
+            github: "https://github.com/ChaseChai/kite_payment",
+          },
+          {
             name: "Nexday",
             desc: "An AI-driven personal growth companion that breaks abstract goals into daily repeatable actions.",
             stack: "Next.js / AI / Product",
@@ -106,20 +137,6 @@ export const resources = {
             stack: "Three.js / Hardware / AI",
             highlight: "Natural language → hardware BOM, no magic.",
             github: "https://github.com/ChaseChai/moduAI",
-          },
-          {
-            name: "GhostCall",
-            desc: "A LinkedIn-style multi-agent collaboration platform with zk-proof-based on-chain reputation verification, agent profiles, and workflow orchestration.",
-            stack: "React / Agent / ZKP",
-            highlight: "Verifiable agent reputation via on-chain zero-knowledge proofs.",
-            github: "https://github.com/ChaseChai/ghostcall",
-          },
-          {
-            name: "kite_payment",
-            desc: "A multi-agent payment closure system with abstracted gateway layer, ECDSA signatures, and whitelist verification.",
-            stack: "Python / Solidity / EVM",
-            highlight: "7 pytest cases covering normal flows and edge scenarios.",
-            github: "https://github.com/ChaseChai/kite_payment",
           },
         ],
       },
@@ -170,8 +187,15 @@ export const resources = {
           },
           {
             year: "2026",
-            title: "Web3 学习",
-            description: "在去中心化基础设施场景中参与真实协作与工程实践。",
+            title: "ETHpanda Web3 实习",
+            description:
+              "ETHpanda 冬季实习计划学员，北邮区块链协会核心成员，参与 100+ 人社群的日常运营。",
+          },
+          {
+            year: "2026",
+            title: "AdventureX 黑客松 · 赛道二等奖",
+            description:
+              "凭借「戒律农场 Decree Farm」智能戒指 × AI Agent 行为激励产品获得赛道二等奖。",
           },
           {
             year: "现在",
@@ -214,6 +238,29 @@ export const resources = {
         kicker: "项目",
         items: [
           {
+            name: "戒律农场 Decree Farm",
+            desc: "智能戒指 × AI Agent 行为激励产品。通过 IMU 传感识别现实专注状态，映射为虚拟农场的游戏化收益，构建感知 → 决策 → 行动 → 反馈的完整 Agent 闭环。",
+            stack: "AI Agent / 端侧 AI / 智能硬件",
+            highlight: "100+ 人社群，从戒指感知到游戏反馈的完整行为闭环。",
+            award: "AdventureX 2026 · 赛道二等奖",
+          },
+          {
+            name: "GhostCall",
+            desc: "AI Agent 协作网络：任务市场 + 协作协议 + 信任基建。基于 zkVM 将 Agent 身份与代码哈希绑定，实现「代码即身份」的可验证执行。",
+            stack: "React / Agent / zkVM",
+            highlight:
+              "沉淀「能力—信誉—价格」图谱，中关村黑客松获奖。",
+            award: "中关村黑客松 2026 · 获奖",
+            github: "https://github.com/ChaseChai/ghostcall",
+          },
+          {
+            name: "AuditOps (Kite Payment)",
+            desc: "基于 Kite AI 的多 Agent 合约审计与 A2A 支付系统。Map-Reduce 多 Agent 审计矩阵，预算隔离 + EIP-712 授权 + Session Key 自主结算。",
+            stack: "Python / Solidity / Agent",
+            highlight: "Kite AI 测试网端到端 Demo，审计成本降低 20–50%。",
+            github: "https://github.com/ChaseChai/kite_payment",
+          },
+          {
             name: "Nexday",
             desc: "AI 驱动的个人成长伴侣，把抽象目标拆解为每天可执行的行动。",
             stack: "Next.js / AI / 产品",
@@ -240,20 +287,6 @@ export const resources = {
             stack: "Three.js / 硬件 / AI",
             highlight: "自然语言 → 硬件 BOM，所见即所得。",
             github: "https://github.com/ChaseChai/moduAI",
-          },
-          {
-            name: "GhostCall",
-            desc: "面向 Agent 的 LinkedIn 式多 Agent 协作平台，通过上链 zk 证明完成 Agent 信誉验证，含 Agent 档案与工作流编排。",
-            stack: "React / Agent / ZKP",
-            highlight: "基于链上零知识证明的可验证 Agent 信誉体系。",
-            github: "https://github.com/ChaseChai/ghostcall",
-          },
-          {
-            name: "kite_payment",
-            desc: "多 Agent 支付闭环系统，支付网关抽象层，ECDSA 数字签名 + 白名单验证。",
-            stack: "Python / Solidity / EVM",
-            highlight: "7 项 pytest 覆盖正常流程与异常场景。",
-            github: "https://github.com/ChaseChai/kite_payment",
           },
         ],
       },
