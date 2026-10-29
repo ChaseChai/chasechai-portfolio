@@ -94,6 +94,55 @@ button {
   transition: all 300ms ease-in-out;
 }
 
+/* --- 锚点跳转时避开 sticky 导航栏遮挡 --- */
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
+/* --- 键盘导航焦点可见 --- */
+:where(a, button):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* --- 滚动揭示动画（替代 framer-motion） --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity 0.32s ease-in-out,
+    transform 0.32s ease-in-out;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* --- 时间线逐项滑入（跟随父级 reveal 触发） --- */
+.timeline-item {
+  opacity: 0;
+  transform: translateX(20px);
+  transition:
+    opacity 0.35s ease-in-out,
+    transform 0.35s ease-in-out;
+}
+
+.reveal-visible .timeline-item {
+  opacity: 1;
+  transform: none;
+}
+
+/* --- Hero 漂浮装饰圆（替代 framer-motion 循环动画） --- */
+.float-a {
+  animation: float-a 14s linear infinite;
+}
+
+.float-b {
+  animation: float-b 11s linear infinite;
+}
+
 @keyframes blink {
   0%,
   49% {
@@ -102,5 +151,56 @@ button {
   50%,
   100% {
     opacity: 0;
+  }
+}
+
+@keyframes float-a {
+  0% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(40px, -20px);
+  }
+  60% {
+    transform: translate(-15px, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes float-b {
+  0% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(-35px, 25px);
+  }
+  66% {
+    transform: translate(10px, -10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* --- 尊重系统「减少动态效果」偏好 --- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal,
+  .timeline-item {
+    opacity: 1;
+    transform: none;
   }
 }

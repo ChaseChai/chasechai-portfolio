@@ -31,7 +31,7 @@ export function SkillsSection() {
                 key={group.title}
                 className="rounded-xl border border-[var(--line-soft)] bg-[var(--surface)] p-5 transition duration-300 ease-in-out hover:scale-[1.015] hover:border-[var(--line-strong)]"
               >
-                <Icon className="h-5 w-5 text-zinc-500" />
+                <Icon className="h-5 w-5 text-[var(--text-muted)]" />
                 <h3 className="mt-3 text-sm uppercase tracking-[0.12em] text-[var(--text-secondary)]">
                   {group.title}
                 </h3>

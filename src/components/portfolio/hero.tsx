@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -13,8 +12,23 @@ export function Hero() {
   const [text, setText] = useState("");
   const [lineIndex, setLineIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
+  const [reduceMotion, setReduceMotion] = useState(false);
 
   useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setReduceMotion(mq.matches);
+    const onChange = (e: MediaQueryListEvent) => setReduceMotion(e.matches);
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
+  }, []);
+
+  useEffect(() => {
+    if (reduceMotion) {
+      // 减少动态效果时：直接静态展示第一句
+      setText(lines[0] ?? "");
+      return;
+    }
+
     const current = lines[lineIndex];
     if (charIndex < current.length) {
       const timer = window.setTimeout(() => {
@@ -31,7 +45,7 @@ export function Hero() {
     }, 1600);
 
     return () => window.clearTimeout(pause);
-  }, [charIndex, lineIndex, lines]);
+  }, [charIndex, lineIndex, lines, reduceMotion]);
 
   return (
     <section
@@ -39,25 +53,13 @@ export function Hero() {
       className="relative overflow-hidden border-b border-[var(--line-soft)] py-24 transition-colors duration-300 ease-in-out md:py-32"
     >
       <div className="line-grid absolute inset-0" aria-hidden />
-      <motion.div
+      <div
         aria-hidden
-        className="absolute -left-20 top-14 h-52 w-52 rounded-full border border-[var(--line-soft)]"
-        animate={{ x: [0, 40, -15, 0], y: [0, -20, 10, 0] }}
-        transition={{
-          duration: 14,
-          ease: "linear",
-          repeat: Number.POSITIVE_INFINITY,
-        }}
+        className="float-a absolute -left-20 top-14 h-52 w-52 rounded-full border border-[var(--line-soft)]"
       />
-      <motion.div
+      <div
         aria-hidden
-        className="absolute bottom-6 right-8 h-36 w-36 rounded-full border border-[var(--line-soft)]"
-        animate={{ x: [0, -35, 10, 0], y: [0, 25, -10, 0] }}
-        transition={{
-          duration: 11,
-          ease: "linear",
-          repeat: Number.POSITIVE_INFINITY,
-        }}
+        className="float-b absolute bottom-6 right-8 h-36 w-36 rounded-full border border-[var(--line-soft)]"
       />
 
       <div className="relative mx-auto w-[min(1120px,92%)]">
@@ -73,9 +75,11 @@ export function Hero() {
 
         <p className="mt-8 min-h-8 text-lg text-[var(--text-secondary)] md:text-xl">
           {text}
-          <span className="typing-caret" aria-hidden>
-            |
-          </span>
+          {reduceMotion ? null : (
+            <span className="typing-caret" aria-hidden>
+              |
+            </span>
+          )}
         </p>
       </div>
     </section>

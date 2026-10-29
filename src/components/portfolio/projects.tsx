@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { ArrowUpRight, Trophy } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { AnimatedReveal } from "./animated-reveal";
@@ -26,26 +25,8 @@ export function ProjectsSection() {
         <p className="section-kicker">{t("projects.kicker")}</p>
 
         <div className="mt-8 grid gap-5 md:grid-cols-3">
-          {projects.map((project, index) => {
-            const cardClass =
-              "group block rounded-xl border border-[var(--line-soft)] bg-[var(--surface)] p-5" +
-              (project.github
-                ? ""
-                : " transition duration-300 ease-in-out hover:border-[var(--line-strong)]");
-
-            const motionProps = {
-              initial: { opacity: 0, y: 22 },
-              whileInView: { opacity: 1, y: 0 },
-              viewport: { once: true, amount: 0.25 },
-              transition: {
-                duration: 0.35,
-                delay: index * 0.08,
-                ease: "easeInOut" as const,
-              },
-              whileHover: { scale: 1.015 },
-            };
-
-            const inner = (
+          {projects.map((project) => {
+            const cardContent = (
               <>
                 <div className="flex items-start justify-between gap-3">
                   <h3 className="text-lg font-medium text-[var(--foreground)]">
@@ -75,21 +56,23 @@ export function ProjectsSection() {
               </>
             );
 
+            const cardClass =
+              "group block rounded-xl border border-[var(--line-soft)] bg-[var(--surface)] p-5 transition duration-300 ease-in-out hover:scale-[1.015] hover:border-[var(--line-strong)]";
+
             return project.github ? (
-              <motion.a
+              <a
                 key={project.name}
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                {...motionProps}
                 className={cardClass}
               >
-                {inner}
-              </motion.a>
+                {cardContent}
+              </a>
             ) : (
-              <motion.div key={project.name} {...motionProps} className={cardClass}>
-                {inner}
-              </motion.div>
+              <div key={project.name} className={cardClass}>
+                {cardContent}
+              </div>
             );
           })}
         </div>
