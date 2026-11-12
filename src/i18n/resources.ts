@@ -87,7 +87,7 @@ export const resources = {
         items: [
           {
             name: "Decree Farm",
-            desc: "An intelligent-ring × AI agent behavior incentive product. IMU sensing detects real-world focus and maps it to a gamified virtual farm through an Observe → Decide → Act → Feedback agent loop.",
+            desc: "An intelligent-ring × AI agent behavior incentive product. On-device IMU focus recognition (sliding-window features + HMM) maps real-world concentration into virtual farm rewards, while an Observe → Decide → Act → Feedback loop plans farming, fishing and trading.",
             stack: "AI Agent / Edge AI / Smart Hardware",
             highlight:
               "100+ member community, full loop from ring sensing to in-game feedback.",
@@ -95,19 +95,21 @@ export const resources = {
           },
           {
             name: "GhostCall",
-            desc: "An AI agent collaboration network: task marketplace, collaboration protocol, and trust infrastructure. Binds agent identity to code hashes and proves execution with zkVM.",
+            meta: "Core Member · 2026.03",
+            desc: "An AI agent collaboration network: task marketplace, collaboration protocol, and trust infrastructure. zkVM ties agent identity to code hashes and proves execution, making \"code as identity\" verifiable.",
             stack: "React / Agent / zkVM",
             highlight:
-              "Verifiable \"code as identity\" execution plus a capability–reputation–price graph.",
+              "A capability–reputation–price graph framing research on stablecoins and on-chain finance infrastructure.",
             award: "Zhongguancun Hackathon 2026 · Award Winner",
             github: "https://github.com/ChaseChai/ghostcall",
           },
           {
             name: "AuditOps (Kite Payment)",
-            desc: "A multi-agent contract audit and A2A payment system on Kite AI. Map-Reduce audit matrix with budget-isolated, EIP-712 authorized settlement and session keys.",
+            meta: "2026.01",
+            desc: "A multi-agent contract audit and A2A payment system on Kite AI. Runs a full request → matching → structured collaboration → atomic settlement loop, with budget-isolated, EIP-712 authorized session-key payments.",
             stack: "Python / Solidity / Agent",
             highlight:
-              "End-to-end demo on Kite AI Testnet with 20–50% lower audit cost.",
+              "20–50% lower audit cost through a vulnerability-bounty rebate model; end-to-end demo on Kite AI Testnet.",
             github: "https://github.com/ChaseChai/kite_payment",
           },
           {
@@ -239,25 +241,28 @@ export const resources = {
         items: [
           {
             name: "戒律农场 Decree Farm",
-            desc: "智能戒指 × AI Agent 行为激励产品。通过 IMU 传感识别现实专注状态，映射为虚拟农场的游戏化收益，构建感知 → 决策 → 行动 → 反馈的完整 Agent 闭环。",
+            desc: "智能戒指 × AI Agent 行为激励产品。端侧 IMU 专注识别（滑窗特征 + HMM 分类）把现实专注状态映射为虚拟农场收益，Agent 按「感知 → 决策 → 行动 → 反馈」闭环由 LLM / 规则双策略自主经营。",
             stack: "AI Agent / 端侧 AI / 智能硬件",
             highlight: "100+ 人社群，从戒指感知到游戏反馈的完整行为闭环。",
             award: "AdventureX 2026 · 赛道二等奖",
           },
           {
             name: "GhostCall",
-            desc: "AI Agent 协作网络：任务市场 + 协作协议 + 信任基建。基于 zkVM 将 Agent 身份与代码哈希绑定，实现「代码即身份」的可验证执行。",
+            meta: "核心成员 · 2026.03",
+            desc: "AI Agent 协作网络：任务市场 + 协作协议 + 信任基建。基于 zkVM 将 Agent 身份与代码哈希绑定并为执行过程生成证明，实现「代码即身份」的可验证执行。",
             stack: "React / Agent / zkVM",
             highlight:
-              "沉淀「能力—信誉—价格」图谱，中关村黑客松获奖。",
+              "沉淀「能力—信誉—价格」图谱，为稳定币与链上金融基础设施研究提供框架。",
             award: "中关村黑客松 2026 · 获奖",
             github: "https://github.com/ChaseChai/ghostcall",
           },
           {
             name: "AuditOps (Kite Payment)",
-            desc: "基于 Kite AI 的多 Agent 合约审计与 A2A 支付系统。Map-Reduce 多 Agent 审计矩阵，预算隔离 + EIP-712 授权 + Session Key 自主结算。",
+            meta: "2026.01",
+            desc: "基于 Kite AI 的多 Agent 合约审计与 A2A 支付系统。跑通「需求发布 → 智能匹配 → 结构化协作 → 原子结算」闭环，预算隔离 + EIP-712 授权 + Session Key 自主结算。",
             stack: "Python / Solidity / Agent",
-            highlight: "Kite AI 测试网端到端 Demo，审计成本降低 20–50%。",
+            highlight:
+              "漏洞悬赏返利模式使审计成本降低 20–50%，Kite AI 测试网端到端 Demo。",
             github: "https://github.com/ChaseChai/kite_payment",
           },
           {

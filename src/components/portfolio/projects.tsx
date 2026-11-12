@@ -6,6 +6,7 @@ import { AnimatedReveal } from "./animated-reveal";
 
 type ProjectItem = {
   name: string;
+  meta?: string;
   desc: string;
   stack: string;
   highlight: string;
@@ -29,9 +30,16 @@ export function ProjectsSection() {
             const cardContent = (
               <>
                 <div className="flex items-start justify-between gap-3">
-                  <h3 className="text-lg font-medium text-[var(--foreground)]">
-                    {project.name}
-                  </h3>
+                  <div>
+                    <h3 className="text-lg font-medium text-[var(--foreground)]">
+                      {project.name}
+                    </h3>
+                    {project.meta ? (
+                      <p className="mt-1 text-[11px] uppercase tracking-[0.1em] text-[var(--text-muted)]">
+                        {project.meta}
+                      </p>
+                    ) : null}
+                  </div>
                   {project.github ? (
                     <ArrowUpRight className="h-4 w-4 shrink-0 text-[var(--text-muted)] transition duration-300 ease-in-out group-hover:text-[var(--foreground)]" />
                   ) : null}
