@@ -44,12 +44,6 @@ export const resources = {
             description:
               "Won a track second prize with Decree Farm, an intelligent-ring × AI agent behavior incentive product.",
           },
-          {
-            year: "Now",
-            title: "Building Nexday",
-            description:
-              "Designing an AI-driven personal growth assistant for planning, reflection, and execution.",
-          },
         ],
       },
       skills: {
@@ -198,11 +192,6 @@ export const resources = {
             title: "AdventureX 黑客松 · 赛道二等奖",
             description:
               "凭借「戒律农场 Decree Farm」智能戒指 × AI Agent 行为激励产品获得赛道二等奖。",
-          },
-          {
-            year: "现在",
-            title: "开发 Nexday",
-            description: "构建 AI 驱动的个人成长助手，连接计划、执行与复盘。",
           },
         ],
       },
